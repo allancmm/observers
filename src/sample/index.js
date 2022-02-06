@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var observer_1 = require("./classes/observer");
+var subject_1 = require("./classes/subject");
+var observerOne = new observer_1["default"](1);
+var observerTwo = new observer_1["default"](2);
+var observerThree = new observer_1["default"](3);
+var subject = new subject_1["default"]();
+console.log("Subscribe 1, 2 and 3");
+subject.subscribe(observerOne);
+subject.subscribe(observerTwo);
+subject.subscribe(observerThree);
+subject.notifyAll();
